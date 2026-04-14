@@ -1,21 +1,15 @@
 mod array;
 
-use std::time::Instant;
-
+use std::io::{self, Write};
 fn main() {
-    println!("Hello, world!");
-    
-    // Create an instance of DataProcessor
-    let mut processor = array::DataProcessor {
-        data: Vec::new(),
-    };
-    
-    // Measure the time taken to process
-    let start = Instant::now();
-    processor.process_large_dataset();
-    let duration = start.elapsed();
-    
-    println!("Time taken: {:?}", duration);
+    println!("Write your name");
+    io::stdout().flush().unwrap(); // Ensure the prompt is printed before reading input
+    let mut name = String::new();
+    io::stdin().read_line(&mut name).expect("Failed to read line");
+    let name = name.trim(); // Remove any trailing newline characters
+    println!("Hello,{name}!")
+
 } 
 
 
+    
