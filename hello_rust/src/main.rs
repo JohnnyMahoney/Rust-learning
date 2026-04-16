@@ -1,15 +1,15 @@
-mod array;
+mod clap;
 
-use std::io::{self, Write};
+use ::clap::Parser;
+use clap::Args;
+
 fn main() {
-    println!("Write your name");
-    io::stdout().flush().unwrap(); // Ensure the prompt is printed before reading input
-    let mut name = String::new();
-    io::stdin().read_line(&mut name).expect("Failed to read line");
-    let name = name.trim(); // Remove any trailing newline characters
-    println!("Hello,{name}!")
+    let args = Args::parse();
 
-} 
-
-
+   if args.verbose {
+        println!("Input:   {}", args.input);
+        println!("Output:  {:?}", args.output);
+        println!("Threads: {}", args.threads);
     
+   }
+}           
