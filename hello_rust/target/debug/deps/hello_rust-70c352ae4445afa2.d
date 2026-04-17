@@ -1,8 +1,5 @@
-C:\Users\User\Rust-learning\hello_rust\target\debug\deps\hello_rust-70c352ae4445afa2.d: src\main.rs src\clap.rs
+C:\Users\User\Rust-learning\hello_rust\target\debug\deps\hello_rust-70c352ae4445afa2.d: src\main.rs
 
-C:\Users\User\Rust-learning\hello_rust\target\debug\deps\libhello_rust-70c352ae4445afa2.rmeta: src\main.rs src\clap.rs
+C:\Users\User\Rust-learning\hello_rust\target\debug\deps\libhello_rust-70c352ae4445afa2.rmeta: src\main.rs
 
 src\main.rs:
-src\clap.rs:
-
-# env-dep:CARGO_PKG_VERSION=0.1.0
