@@ -1,22 +1,29 @@
-//Immutable reference example(like C# 'in' keyword)
-fn read_only(data: &Vec<i32>) {
-    println!("Read-only data: {:?}", data);
+
+pub struct Counter {
+    value: i32,
+}  
+
+impl Counter {
+    pub fn new() -> Counter {
+        Counter{value: 0}
+    }
+
+    pub fn increment(&mut self) {
+        self.value += 1;
+    }
+
+    pub fn get_value(&self) -> i32 {
+        self.value
+    }
+
 }
-//Mutable reference example(like C# 'ref' keyword)
-fn modify(data: &mut Vec<i32>) {
-    data.push(42);
-    println!("Modified data: {:?}", data);
-}
+
 
 fn main() {
-    let mut my_data = vec![1, 2, 3];
-    read_only(&my_data); // Pass an immutable reference
-    modify(&mut my_data); // Pass a mutable reference
 
-
-
-    let data = vec![1, 2, 3];
-     let closure = move || {
-    println!("{:?}", data); // data is moved into closure
-};
+    let mut counter = Counter::new();
+    counter.increment();
+    counter.increment();
+    counter.increment();
+    println!("{}", counter.get_value());
 }
