@@ -26,4 +26,12 @@ fn main() {
     counter.increment();
     counter.increment();
     println!("{}", counter.get_value());
+
+
+    let name = "John"; //defaut $str (string slice)
+    let count = 42; //default int i32
+    let price = 23.33; //default float f64
+
+    let count: u32 = 42;
+let price: f32 = 29.99;
 }
